@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@600;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary-color: #0a0d14;
+    --primary-color-light: #20242f;
+    --secondary-color: #f49e09;
+    --extra-light: rgba(255, 255, 255, 0.5);
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font: "Lisu Bosa", serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section_container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section_header {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    text-align: center;
+}
+
+.section_subheader {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+#home {
+    background-image: linear-gradient(to top, var(--primary-color), transparent), url("../static/header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: change 30s infinite ease-in-out;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var(--extra-light);
+}
+
+.nav_bar {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav_logo a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.links a {
+    padding: 1.5rem 5px;
+    font-weight: 500;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.links span {
+    padding: 1rem 0;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.header_container {
+    padding: 12rem 1rem;
+}
+
+.header_container h1 {
+    margin-bottom: 1rem;
+    max-width: 700px;
+    font-size: 4rem;
+    font-family: var(--header-font);
+}
+
+.header_container h4 {
+    position: relative;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.header_container h4::after {
+    position: absolute;
+    content: "";
+    left: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 2rem;
+    background-color: var(--white);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 10px 0 10px;
+    background: var(--primary-color-light);
+}
+
+.footer-text p {
+    font-size: 1rem;
+}
+
+@keyframes change {
+    0%{
+        background-image: url("../static/header.jpg");
+    }
+    20%{
+        background-image: url("../static/beach_2.jpg");
+    }
+    40%{
+        background-image: url("../static/beach_3.jpg");
+    }
+    60%{
+        background-image: url("../static/mountain_1.jpg");
+    }
+    80%{
+        background-image: url("../static/mountain_2.jpg");
+    }
+    100%{
+        background-image: url("../static/mountain_3.jpg");
+    }
+    
+}
